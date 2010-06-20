@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), '..', 'short.rb')
+require 'short'
 require 'test/unit'
 Bundler.require(:test)
 
