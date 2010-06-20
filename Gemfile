@@ -1,0 +1,5 @@
+gem 'sinatra'
+gem 'dm-core'
+gem 'dm-postgres-adapter'
+gem 'dm-timestamps'
+gem 'json'
