@@ -1,3 +1,3 @@
-require 'mongoshort'
- 
+require 'short'
+
 run Sinatra::Application
