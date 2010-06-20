@@ -24,16 +24,19 @@ class UrlTest < Test::Unit::TestCase
 
   def test_identifier_should_redirect_to_original_if_url_identifier_exists
     get '/1'
+    assert_equal 301, last_response.status
     assert last_response.redirect?
     follow_redirect!
     assert_equal 'http://www.amazon.com/', last_request.url
 
     get '/2'
+    assert_equal 301, last_response.status
     assert last_response.redirect?
     follow_redirect!
     assert_equal 'http://www.ebay.com/', last_request.url
 
     get '/3'
+    assert_equal 301, last_response.status
     assert last_response.redirect?
     follow_redirect!
     assert_equal 'http://news.ycombinator.com/', last_request.url

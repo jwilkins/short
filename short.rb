@@ -75,7 +75,7 @@ get '/:url' do
   else
     url.view_count += 1
     url.save
-    redirect url.original
+    redirect url.original, 301
   end
 end
 
